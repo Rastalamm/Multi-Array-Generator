@@ -1,18 +1,35 @@
-//function randomArrGenerate(arrs, indy){
+function randomArrGenerate(arrs, indy){
 
     var randomArray = [];
+    var randomNum = Math.ceil(Math.random()*100);
+    var finalArr = [];
 
     var count = 0;
-    while(count < 6){
-        randomArray.push(Math.ceil(Math.random()*100))
+    while(count < (arrs*indy)){
+        randomArray.push(Math.ceil(Math.random()*100));
         count++;
     }
 
-    randomArray.sort(function(a, b){return a-b});
+    //Sorting the random array
+    randomArray.sort(function(a, b){return a-b;});
+    console.log(randomArray);
 
-    var newArr
+
+  for(var i = 0; i < randomArray.length; i++){
+    var newArr = [];
 
 
-//}
+    //Need to modify this loop to run
+    for(var j = 0; j < indy; j++){
+        newArr.push(randomArray.shift());
+    }
 
-  console.log(randomArray);
+    finalArr.push(newArr);
+    console.log(finalArr);
+    }
+  return finalArr;
+}
+
+
+randomArrGenerate(3,3);
+
