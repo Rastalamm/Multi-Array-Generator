@@ -1,7 +1,6 @@
 function randomArrGenerate(arrs, indy){
 
     var randomArray = [];
-    var randomNum = Math.ceil(Math.random()*100);
     var finalArr = [];
 
     var count = 0;
@@ -20,6 +19,7 @@ function randomArrGenerate(arrs, indy){
 
 
     //Need to modify this loop to run
+    //maybe use a slice to move arrays around
     for(var j = 0; j < indy; j++){
         newArr.push(randomArray.shift());
     }
