@@ -14,7 +14,7 @@ function randomArrGenerate(arrs, indy){
     console.log(randomArray);
 
 
-  for(var i = 0; i < randomArray.length; i++){
+  for(var i = 0; i < arrs; i++){
     var newArr = [];
 
 
